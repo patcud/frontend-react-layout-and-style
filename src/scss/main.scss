@@ -1,0 +1,150 @@
+$primary-color: #6eda78;
+$secondary-color: #ffa200;
+$white: #ffffff;
+$shape-color: #888888;
+
+.shape {
+  display: inline-block;
+}
+
+#triangle-left {
+  @extend .shape;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 100px solid $shape-color;
+}
+
+#triangle-right {
+  @extend .shape;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid $shape-color;
+}
+
+#triangle-top {
+  @extend .shape;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 100px solid $shape-color;
+}
+
+#triangle-bottom {
+  @extend .shape;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 100px solid $shape-color;
+}
+
+#square {
+  @extend .shape;
+  width: 100px;
+  height: 100px;
+  background-color: $shape-color;
+}
+
+#circle {
+  @extend .shape;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: $shape-color;
+}
+
+#oval {
+  @extend .shape;
+  border-radius: 50%;
+  width: 250px;
+  height: 100px;
+  background-color: $shape-color;
+}
+
+#trapezoid {
+  @extend .shape;
+  width: 250px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid $shape-color;
+}
+
+#rectangle {
+  @extend .shape;
+  width: 250px;
+  height: 100px;
+  background-color: $shape-color;
+}
+
+#parallelogram {
+  width: 210px;
+  height: 100px;
+  transform: skew(20deg);
+  background: $shape-color;
+}
+
+
+body {
+  background-color: $primary-color;
+  background: linear-gradient(45deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+.lang {
+  position: absolute;
+  width: 65px;
+  margin-top: 2px;
+  padding: 5px;
+  right: 5px;
+}
+
+header {
+  padding: 2em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+button {
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 10px;
+  width: 100%;
+  
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  &:active {
+    background-color: $primary-color;
+  }
+}
+
+.controller-button {
+  padding-bottom: 30px;
+}
+
+.controller-label {
+  position: absolute;
+  bottom: -0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 500px;
+  padding: 5px;
+  color: $white;
+  background-color: $primary-color;
+}
